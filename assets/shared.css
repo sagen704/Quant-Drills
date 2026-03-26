@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Bebas+Neue&display=swap");
+
+:root {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --border: #2a2a2a;
+  --accent: #e8ff47;
+  --text: #e8e8e8;
+  --muted: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Mono", monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+}
+
+header {
+  margin-bottom: 3.5rem;
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.drill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.drill-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+  color: var(--text);
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.drill-card:hover {
+  border-color: var(--accent);
+  background: rgba(232, 255, 71, 0.03);
+}
+
+.drill-card:hover .arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+.drill-card.coming-soon {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.drill-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.drill-name {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.drill-desc {
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.drill-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.badge.active {
+  border-color: rgba(232, 255, 71, 0.3);
+  color: var(--accent);
+  background: rgba(232, 255, 71, 0.05);
+}
+
+.arrow {
+  font-size: 1rem;
+  color: var(--muted);
+  transition:
+    transform 0.15s,
+    color 0.15s;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
